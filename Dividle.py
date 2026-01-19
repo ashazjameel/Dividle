@@ -3,9 +3,9 @@ from random import randint
 from time import sleep as wait
 
 def hover(e):
-    btn.config(bg=hoverColour)
+    button.config(bg=hoverColour)
 def hover2(e):
-    btn.config(bg=buttonColour)
+    button.config(bg=buttonColour)
 def hide():
     title.pack_forget()
     button.place_forget()
@@ -128,6 +128,7 @@ button2.bind("<Leave>", hover2)
 
 
 window.mainloop()
+
 
 
 
