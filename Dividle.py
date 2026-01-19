@@ -3,12 +3,18 @@ from random import randint
 from time import sleep as wait
 
 def hover(e):
-    button.config(bg=hoverColour)
+    e.widget.config(bg=hoverColour)
 def hover2(e):
-    button.config(bg=buttonColour)
+    e.widget.config(bg=buttonColour)
+    
+def delete():
+    for widget in window.winfo_children():
+        widget.destroy()
+        
 def hide():
-    title.pack_forget()
-    button.place_forget()
+    #title.pack_forget()
+    #button.place_forget()
+    delete()
     fraction()
 
 def centre(rX,rY,text,font):
@@ -19,7 +25,7 @@ def centre(rX,rY,text,font):
     a.place(relx=rX,rely=rY,x=-offset/2)
     return a
 
-def clear(list1,col):
+def clear(list1,col):           #sets all number buttons back to grey (from red)
     for i in list1:
         i.config(bg=col)
 
@@ -78,8 +84,7 @@ def inpNumber(i,c):
 
 def lose():
     global score
-    for widget in window.winfo_children():
-        widget.destroy()
+    delete()
     if score<3:
         losetext = "noob"
     elif score<6:
@@ -128,7 +133,6 @@ button2.bind("<Leave>", hover2)
 
 
 window.mainloop()
-
 
 
 
