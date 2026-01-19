@@ -1,5 +1,6 @@
 import tkinter
 from random import randint
+from time import sleep as wait
 
 def hover(e):
     button.config(bg=hoverColour)
@@ -18,12 +19,16 @@ def centre(rX,rY,text,font):
     a.place(relx=rX,rely=rY,x=-offset/2)
     return a
 
+def clear(list1,col):
+    for i in list1:
+        i.config(bg=col)
+
 def updateNum(cur):
     global outText
     outText = centre(0.5,.15,cur,("Arial",30))
     
 def fraction():
-    global cur
+    global cur, numberButtons
     global lives, score
     a = randint(1,98)
     b = randint(a+1,99)
@@ -36,14 +41,18 @@ def fraction():
     livesText.place(x=20,rely=0.9)
     cur="0."
     updateNum(cur)
-    numbers(c)
+    numberButtons = numbers(c)
 
 def numbers(c):
+    a = []
     for i in range(0,10):
-        tkinter.Button(window,text=f"{i}",command=lambda i=i: inpNumber(i,c),bg=buttonColour,activebackground=clickedColour,font=("Arial",30)).place(relx = ((i%5)/5), rely = 0.4, y =+ ((i//5)*(numWidth+30)), x=+numGap, width=numWidth,height=numHeight)
+        b = tkinter.Button(window,text=f"{i}",command=lambda i=i: inpNumber(i,c),bg=buttonColour,activebackground=clickedColour,font=("Arial",30))
+        b.place(relx = ((i%5)/5), rely = 0.4, y =+ ((i//5)*(numWidth+30)), x=+numGap, width=numWidth,height=numHeight)
+        a.append(b)
+    return (a)
 
 def inpNumber(i,c):
-    global cur
+    global cur, numberButtons
     global lives, score
     c = str(c)
     text = outText.cget("text")
@@ -53,10 +62,12 @@ def inpNumber(i,c):
         nextDig = c[len(text)]
         print(nextDig,i,cur)                #devmode
         if int(nextDig)==i:
+            clear(numberButtons,buttonColour)
             score+=1
             cur+=str(i)
             updateNum(cur)
         else:                                       #incorrect (noob)
+            numberButtons[i].config(bg="red")
             lives -= 1
             livesText = tkinter.Label(window,text=f"Lives: {lives}",font=("Arial",20))
             livesText.place(x=20,rely=0.9)
@@ -111,7 +122,6 @@ button.bind("<Leave>", hover2)
 
 
 window.mainloop()
-
 
 
 
