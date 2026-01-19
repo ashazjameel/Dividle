@@ -3,9 +3,9 @@ from random import randint
 from time import sleep as wait
 
 def hover(e):
-    button.config(bg=hoverColour)
+    btn.config(bg=hoverColour)
 def hover2(e):
-    button.config(bg=buttonColour)
+    btn.config(bg=buttonColour)
 def hide():
     title.pack_forget()
     button.place_forget()
@@ -116,6 +116,12 @@ button=tkinter.Button(window, text="Play", command=lambda: hide(),
 button.place(relx = 0.5, rely=.4, width = buttonWidth, x =- buttonWidth/2, height = buttonHeight)
 button.bind("<Enter>", hover)
 button.bind("<Leave>", hover2)
+
+button2=tkinter.Button(window, text="Play2", command=lambda: hide(),
+                      bg = buttonColour, activebackground = clickedColour, font=("Arial",30))
+button2.place(relx = 0.5, rely=.4, width = buttonWidth, x =- buttonWidth/2, height = buttonHeight,y=+(buttonHeight+5))
+button2.bind("<Enter>", hover)
+button2.bind("<Leave>", hover2)
 
 #textInput=tkinter.Entry(window)
 #textInput.pack()
