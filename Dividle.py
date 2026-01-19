@@ -12,8 +12,6 @@ def delete():
         widget.destroy()
 
 def hide():
-    #title.pack_forget()
-    #button.place_forget()
     delete()
     fraction()
 
@@ -139,6 +137,7 @@ button2.bind("<Leave>", hover2)
 
 
 window.mainloop()
+
 
 
 
