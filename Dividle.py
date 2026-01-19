@@ -10,7 +10,7 @@ def hover2(e):
 def delete():
     for widget in window.winfo_children():
         widget.destroy()
-        
+
 def hide():
     delete()
     fraction()
@@ -37,13 +37,19 @@ def fraction():
     a = randint(1,98)
     b = randint(a+1,99)
     c = a/b                         #17? digits
-    textNumber = tkinter.Label(window, text=f"{a}/{b} = ",font=("Arial",45))
+    cur="0."
+    text=f"{a}/{b} = "
+    game(text,cur,c)
+
+def game(text,cur,c):
+    global numberButtons
+    global lives, score
+    textNumber = tkinter.Label(window, text=text,font=("Arial",45))
     textNumber.pack()
     lives = 3
     score = 0
     livesText = tkinter.Label(window,text=f"Lives: {lives}",font=("Arial",20))
     livesText.place(x=20,rely=0.9)
-    cur="0."
     updateNum(cur)
     numberButtons = numbers(c)
 
