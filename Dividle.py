@@ -3,9 +3,18 @@ from random import randint
 from time import sleep as wait
 
 def hover(e):
-    e.widget.config(bg=hoverColour)
+    #print(e.widget["bg"])
+    if e.widget["bg"] in ["red",redHoverColour]:
+        e.widget.config(bg=redHoverColour)
+    else:
+        e.widget.config(bg=hoverColour)
+
 def hover2(e):
-    e.widget.config(bg=buttonColour)
+    #print(e.widget["bg"])
+    if e.widget["bg"] in ["red",redHoverColour]:
+        e.widget.config(bg="red")
+    else:
+        e.widget.config(bg=buttonColour)
     
 def delete():
     for widget in window.winfo_children():
@@ -58,6 +67,8 @@ def numbers(c):
     for i in range(0,10):
         b = tkinter.Button(window,text=f"{i}",command=lambda i=i: inpNumber(i,c),bg=buttonColour,activebackground=clickedColour,font=("Arial",30))
         b.place(relx = ((i%5)/5), rely = 0.4, y =+ ((i//5)*(numWidth+30)), x=+numGap, width=numWidth,height=numHeight)
+        b.bind("<Enter>",hover)
+        b.bind("<Leave>", hover2)
         a.append(b)
     return (a)
 
@@ -114,6 +125,7 @@ buttonWidth, buttonHeight = 350, 50
 buttonColour = "#ABABAB"
 hoverColour = "#CCCCCC"
 clickedColour = "#C2C2C2"
+redHoverColour = "#FF5E5E"
 numWidth,numHeight = 120,110
 numGap = int(90-(numWidth)/2)
 
@@ -137,7 +149,6 @@ button2.bind("<Leave>", hover2)
 
 
 window.mainloop()
-
 
 
 
