@@ -34,4 +34,5 @@
 .buttons button:active{
 	background-color: rgb(185,185,185);
 	border: 10px inset rgb(210,210,210);
+	padding-top: 10px;
 }
