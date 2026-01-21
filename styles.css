@@ -18,12 +18,20 @@
 	width: 600px;
 	height: 100px;
 	margin: auto;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	transform: translate(-50%,0%);
 	font-size: 60px;
-	font-family: "Georgia"
+	font-family: "Georgia";
+	border: 10px outset rgb(205,205,205);
+	box-shadow: 4px 4px rgb(30,30,30), 4px -4px rgb(30,30,30), -4px 4px rgb(30,30,30), -4px -4px rgb(30,30,30);
 }
 
 .buttons button:hover{
-	background-color: rgb(204,204,204);
+	background-color: rgb(200,200,200);
+	border: 10px outset rgb(234,234,234);
+}
+
+.buttons button:active{
+	background-color: rgb(185,185,185);
+	border: 10px inset rgb(210,210,210);
 }
