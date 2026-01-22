@@ -36,3 +36,8 @@
 	border: 10px inset rgb(210,210,210);
 	padding-top: 10px;
 }
+
+.square button{
+	width: 200px;
+	height: 200px;
+}
