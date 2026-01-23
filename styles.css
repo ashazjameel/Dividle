@@ -45,9 +45,11 @@
 
 .square button{
 	left: 120px;		/* width/2 + spacing */
+	margin-left: 4%;
 	width: 200px;
 	aspect-ratio: 1/1;
 }
+
 
 
 
