@@ -39,11 +39,12 @@
 
 .square{
 	position: absolute;
-	left: 120px;
+	left: 120px;		/* width/2 + spacing */
 }
 
 .square button{
 	width: 200px;
 	aspect-ratio: 1/1;
 }
+
 
