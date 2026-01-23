@@ -44,11 +44,13 @@
 }
 
 .square button{
+	width: 200px;
 	left: 120px;		/* width/2 + spacing */
 	margin-left: 4%;
-	width: 200px;
+	margin-bottom: 3%;
 	aspect-ratio: 1/1;
 }
+
 
 
 
