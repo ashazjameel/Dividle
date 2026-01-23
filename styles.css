@@ -37,6 +37,11 @@
 	padding-top: 10px;
 }
 
+.square{
+	position: absolute;
+	left: 120px;
+}
+
 .square button{
 	width: 200px;
 	height: 200px;
