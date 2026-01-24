@@ -34,7 +34,11 @@
 .buttons button:active{
 	background-color: rgb(185,185,185);
 	border: 10px inset rgb(210,210,210);
-	padding-top: 10px;
+}
+
+.buttons button:active span{
+	position: relative;
+	top: 10px;
 }
 
 .square{
@@ -50,6 +54,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
