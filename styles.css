@@ -1,5 +1,6 @@
 .title {
 	font-size: 140px;
+	font-family: "Georgia";
 	position: absolute;
 	left: 50%;
 	margin-top: 10px;
@@ -57,6 +58,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
