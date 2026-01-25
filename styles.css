@@ -8,6 +8,15 @@
 	user-select: none;
 }
 
+.lives{
+	font-size: 60px;
+	font-family: "Georgia";
+	position: absolute;
+	left: 40px;
+	bottom: -40px;
+	user-select: none;
+}
+
 .buttons {
 	position: absolute;
 	top: 40%;
@@ -58,6 +67,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
