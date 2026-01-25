@@ -57,7 +57,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 45%;
+	top: 43%;
 }
 
 .square button{
@@ -67,6 +67,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
