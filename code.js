@@ -13,7 +13,7 @@ function displayNum() {
 
 function correct(c){
 	document.getElementById("answer").innerText = c;
-	document.getElementById("answer").style.color = "green";
+	document.getElementById("answer").style.color = "#00FF00";
 	window.setTimeout(displayNum,750);
 }
 
@@ -40,6 +40,7 @@ function check(num) {
 		return;		//incorrect
 	}
 }
+
 
 
 
