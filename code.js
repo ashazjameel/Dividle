@@ -14,6 +14,7 @@ function displayNum() {
 function correct(c){
 	document.getElementById("answer").innerText = c;
 	document.getElementById("answer").style.color = "green";
+	window.setTimeout(displayNum,750);
 }
 
 function check(num) {
@@ -39,6 +40,7 @@ function check(num) {
 		return;		//incorrect
 	}
 }
+
 
 
 
