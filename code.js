@@ -19,13 +19,13 @@ function check(num) {
 	txt = document.getElementById("question").innerText;
 	ind = txt.indexOf("/");
 	a = txt.slice(0,ind); b = txt.slice(ind+1,-2); c = (a/b).toString();
-	ans = document.getElementById("answer").innerText.slice(2,-1);
+	ans = document.getElementById("answer").innerText;
 	
-	if (ans.length + 2 == c.length) {
-		correct(c);		//already won
-		return;
+	if (ans.slice(-1) != "_") {
+		return;			//already won
 	}
 	
+	ans = ans.slice(2,-1);
 	nextDig = c[2+ans.length];
 	if (num == nextDig) {
 		document.getElementById("answer").innerText = c.slice(0,3+ans.length)+"_";		//correct
@@ -37,4 +37,5 @@ function check(num) {
 		return;		//incorrect
 	}
 }
+
 
