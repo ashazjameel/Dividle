@@ -7,6 +7,8 @@ function displayNum() {
 	let a, b;
 	a = randint(1,98); b = randint(a+1,99);
 	document.getElementById("question").innerText = a + "/" + b + " =";
+	document.getElementById("answer").innerText = "0._";
+	document.getElementById("answer").style.color = "#000000"
 }
 
 function correct(c){
@@ -37,5 +39,6 @@ function check(num) {
 		return;		//incorrect
 	}
 }
+
 
 
