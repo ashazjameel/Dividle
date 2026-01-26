@@ -9,6 +9,11 @@ function displayNum() {
 	document.getElementById("question").innerText = a + "/" + b + " =";
 }
 
+function correct(c){
+	document.getElementById("answer").innerText = c;
+	document.getElementById("answer").style.color = "green";
+}
+
 function check(num) {
 	let a, b, c, txt, ind, ans, nextDig;
 	txt = document.getElementById("question").innerText;
@@ -25,4 +30,5 @@ function check(num) {
 		return;		//incorrect
 	}
 }
+
 
