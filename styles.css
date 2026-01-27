@@ -1,3 +1,8 @@
+@font-face{
+	font-family: "TeXMath";
+	src: url(texgyreschola-math.otf) format("truetype");
+}
+
 .title {
 	font-size: 140px;
 	font-family: "Georgia";
@@ -67,6 +72,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
