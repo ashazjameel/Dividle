@@ -18,7 +18,7 @@
 	font-family: "TeXMath";
 	position: absolute;
 	left: 40px;
-	bottom: -35px;
+	bottom: -50px;
 	user-select: none;
 }
 
@@ -72,6 +72,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
