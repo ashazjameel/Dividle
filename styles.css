@@ -1,10 +1,10 @@
-@font-face{
-	font-family: "TeXMath";
+@-face{
+	-family: "TeXMath";
 	src: url(texgyreschola-math.otf) format("truetype");
 }
 
 .title {
-	font-size: 140px;
+	-size: 140px;
 	font-family: "Georgia";
 	position: absolute;
 	left: 50%;
@@ -15,7 +15,7 @@
 
 .lives{
 	font-size: 60px;
-	font-family: "Georgia";
+	font-family: "TeXMath";
 	position: absolute;
 	left: 40px;
 	bottom: -35px;
@@ -37,8 +37,8 @@
 	margin: auto;
 	margin-bottom: 20px;
 	transform: translate(-50%,0%);
-	font-size: 60px;
-	font-family: "Georgia";
+	-size: 60px;
+	-family: "TeXMath";
 	border: 10px outset rgb(205,205,205);
 	box-shadow: 4px 4px rgb(30,30,30), 4px -4px rgb(30,30,30), -4px 4px rgb(30,30,30), -4px -4px rgb(30,30,30);
 }
@@ -72,6 +72,7 @@
 	margin-bottom: 3%;
 	aspect-ratio: 1.5/1;
 }
+
 
 
 
